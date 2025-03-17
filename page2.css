@@ -1,0 +1,400 @@
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1f2025;
+}
+
+.book {
+    width: 95%;
+    height: 95%;
+    display: flex;
+}
+
+.book .left,
+.book .right {
+    width: 80%;
+    position: relative;
+    height: 100%;
+    /* border: 1px solid #fff; */
+}
+
+.book .left {
+    width: 20%;
+    background: #2e3037;
+}
+
+.book .left img {
+    width: 100%;
+    height: 60%;
+}
+
+.book .left .play {
+    position: relative;
+    left: 40%;
+    top: -25px;
+    background: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: black;
+    box-shadow: 0px 0px 20px #fff;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.book .left .play:hover {
+    transform: rotate(360deg);
+}
+
+.book .left .cont {
+    height: 100px;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.book .left .cont h6 {
+    font-size: 20px;
+}
+
+.book .left .cont p {
+    font-size: 14px;
+}
+
+.book .right {
+    padding: 10px 40px;
+    background: unset;
+}
+
+.book .right::before {
+    position: absolute;
+    content: '';
+    width: 95%;
+    height: 300px;
+    /* border: 1px solid #fff; */
+    background: url(/image/chellodivas2.jpg) center;
+    background-repeat: no-repeat;
+    background-size: 1500px 300px;
+    z-index: -10;
+    border-radius: 20px;
+}
+
+.book .right::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 310px;
+    left: -15px;
+    top: 0;
+    background: linear-gradient(100deg, transparent, #1f2025);
+    z-index: -9;
+}
+
+.book .right .head_time {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book .right .head_time::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    top: 0;
+    right: -43px;
+    background: linear-gradient(90deg, transparent, #1f2025);
+    z-index: -9;
+}
+
+.book .right .head_time::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    top: 0;
+    left: -43px;
+    background: linear-gradient(270deg, transparent, #1f2025);
+    z-index: -9;
+}
+
+.book .right .head_time h1 {
+    color: #ffffff;
+    font-weight: 600;
+    /* margin-top: 25px; */
+    margin-left: 10px;
+}
+
+.book .right .head_time .time {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.book .right .head_time .time h6 {
+    font-size: 13px;
+    /* margin-top: 250px; */
+    margin-right: 10px;
+}
+
+.book .right .date_type {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.book .right .date_type .left_card,
+.book .right .date_type .right_card {
+    margin-top: 10px;
+    width: 49%;
+    /* border: 1px solid black;  */
+}
+
+.book .right .title {
+    margin-top: 5px;
+    color: #fff;
+}
+
+.book .right .crd {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    border-top: 1px solid rgba(184, 184, 184, 0.2);
+    padding: 5px 0;
+}
+
+.book .right .crd::-webkit-scrollbar {
+    height: 3px;
+    background: rgba(184, 184, 184, 0.2);
+}
+
+.book .right .crd::-webkit-scrollbar-thumb {
+    height: 3px;
+    background: rgba(184, 184, 184, 0.5);
+}
+
+.book .right .crd li {
+    list-style: none;
+    color: #fff;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.book .right .crd li h6:nth-child(2) {
+    background: transparent;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: 3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.book .right .crd li h6:nth-child(2):hover {
+    background: #de0a14;
+}
+
+.book .right .date_type .right_card li h6:nth-child(2) {
+    border-radius: 8px;
+    width: unset;
+    height: unset;
+    padding: 1px 5px 0 5px;
+}
+
+.h6_active {
+    background: #de0a14 !important;
+}
+
+/* screen start */
+.screen {
+    width: 100%;
+    height: 100px;
+    border-top: 3px solid brown;
+    position: relative;
+    margin-top: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.screen h3 {
+    align-items: center;
+    margin-left: 700px;
+    margin-top: -1px;
+    letter-spacing: 5px;
+    font-size: 35px;
+}
+
+.chair {
+    width: 95%;
+    /* border: 1px solid white; */
+    margin: auto;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.row li {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    background: rgba(184, 184, 184, 0.3);
+    list-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.row li::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: rgba(184, 184, 184, 0.1);
+    bottom: -8px;
+    border-radius: 10px;
+}
+
+.row li:hover {
+    background: greenyellow;
+    color: #1f2025;
+}
+
+.row li:nth-child(6) {
+    margin-right: 20px;
+}
+
+.row li:nth-child(18) {
+    margin-right: 20px;
+}
+
+.row span {
+    color: #fff;
+    font-weight: 600;
+}
+
+.chair .booked {
+    background: #ce565c !important;
+}
+
+.chair .selected {
+    background: greenyellow !important;
+    color: black !important;
+}
+
+.details {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.details .details_chair {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.details .details_chair li {
+    position: relative;
+    list-style-type: none;
+    /* border-radius: 5px; */
+    transition: 0.3s linear;
+    margin-left: 50px;
+    margin-top: 70px;
+    font-weight: 600px;
+    font-size: 25px;
+    color: rgba(184, 184, 184, 0.3);
+}
+
+.details .details_chair li::before {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 18px;
+    background: rgba(184, 184, 184, 0.3);
+    margin-left: -32px;
+    margin-top: 6px;
+    border-radius: 5px;
+    transition: 0.3s linear;
+}
+
+.details .details_chair li::after {
+    position: absolute;
+    content: '';
+    width: 23px;
+    height: 4px;
+    background: rgba(184, 184, 184, 0.1);
+    border-radius: 10px;
+    left: -30px;
+    bottom: -6px;
+    transition: 0.3s linear;
+}
+
+.details .details_chair li:nth-child(2)::after {
+    background: #ce565c;
+}
+
+.details .details_chair li:nth-child(2)::before {
+    background: #ce565c;
+}
+
+.details .details_chair li:nth-child(3)::after {
+    background: greenyellow;
+}
+
+.details .details_chair li:nth-child(3)::before {
+    background: greenyellow;
+}
+
+.book_tic {
+    position: absolute;
+    right: 1%;
+    bottom: 77px;
+    padding: 15px 15px;
+    border-radius: 50%;
+    background: #ce565c;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.book_tic:hover {
+    color: #1f2025;
+}
